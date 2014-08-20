@@ -13,6 +13,5 @@ elif [ platform = "Darwin" ]; then
 fi
 
 # set editor configuration files
-ln -s "$DOTFILES"/.emacs.d .emacs.d
 ln -s "$DOTFILES"/.vim .vim
 
