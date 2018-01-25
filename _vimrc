@@ -62,8 +62,10 @@ autocmd BufWritePre * :%s/\s\+$//ge
 " 保存時にtabをスペースに変換する
 autocmd BufWritePre * :%s/\t/ /ge
 
-" Pythonインデント設定
+
 filetype plugin on
+
+" Pythonインデント設定
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
@@ -76,16 +78,13 @@ function! s:ExecPy()
     autocmd FileType python map <silent> <C-P> :call <SID>ExecPy()<CR>
 
 " Javaインデント設定
-filetype plugin on
-autocmd FileType java setl autoindent
-autocmd FileType java setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType java setl autoindent expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " HTMLインデント設定
-filetype plugin on
-autocmd FileType html setl autoindent
-autocmd FileType html setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType html setl autoindent expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " ShellScriptインデント設定
-filetype plugin on
-autocmd FileType sh setl autoindent
-autocmd FileType sh setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType sh setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+" YAMLインデント設定
+autocmd FileType yaml setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
