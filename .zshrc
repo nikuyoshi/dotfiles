@@ -70,7 +70,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source .pecorc 2> /dev/null || echo 'Done NOT exist ".pecorc"'
+source ${HOME}/.pecorc 2> /dev/null || echo '".pecorc" doesnt exist'
 
 # User configuration
 
