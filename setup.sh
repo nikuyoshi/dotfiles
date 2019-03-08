@@ -9,6 +9,7 @@ declare -a dotfiles=(
   '.pecorc'
   '.gitignore'
   '.zshrc'
+  '.iterm2-profiles'
 )
 
 for dotfile in "${dotfiles[@]}"
