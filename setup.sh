@@ -10,6 +10,7 @@ declare -a dotfiles=(
   '.gitignore'
   '.zshrc'
   '.iterm2-profiles'
+  '.config/fish/config.fish'
 )
 
 for dotfile in "${dotfiles[@]}"
