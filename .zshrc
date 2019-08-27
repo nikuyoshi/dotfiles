@@ -71,6 +71,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source ${HOME}/.pecorc 2> /dev/null || echo '".pecorc" doesnt exist'
 alias profile='echo -ne "\033]1337;SetProfile=$(peco ~/.iterm2-profiles)\a"'
+alias vim="mvim -v"
 
 # User configuration
 
