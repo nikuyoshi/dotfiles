@@ -11,7 +11,12 @@ declare -a dotfiles=(
   '.zshrc'
   '.iterm2-profiles'
   '.config/fish/config.fish'
+  '.config/omf/theme'
 )
+
+# Install oh-my-fish
+curl -L https://get.oh-my.fish | fish
+/usr/bin/fish --command "omf install robbyrussell"
 
 for dotfile in "${dotfiles[@]}"
 do
