@@ -13,3 +13,11 @@ alias start=/mnt/c/Windows/explorer.exe
 # Ubuntu settings
 command /usr/bin/keychain $HOME/.ssh/id_rsa
 eval (keychain --eval --agents ssh id_rsa | source)
+
+set PATH ~/.local/bin $PATH
+
+# cfn-guard
+set PATH ~/dev/readonly/cloudformation-guard/bin $PATH
+
+# Go
+set PATH /usr/local/go/bin $PATH
