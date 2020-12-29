@@ -9,10 +9,9 @@ end
 set UNAME (uname | tr "[:upper:]" "[:lower:]")
 # If Linux, try to determine specific distribution
 if [ "$UNAME" = "linux" ]
-   set DISTRO (awk -F= '/^NAME/{print $2}' /etc/os-release | sed s/'\"'//g)
+   set -x DISTRO (awk -F= '/^NAME/{print $2}' /etc/os-release | sed s/'\"'//g)
 end
 set -e UNAME
-export $DISTRO
 
 switch $DISTRO
   case Darwin
@@ -27,7 +26,7 @@ end
 set PATH ~/.local/bin $PATH
 
 # cfn-guard
-set PATH ~/dev/readonly/cloudformation-guard/bin $PATH
+# set PATH ~/dev/readonly/cloudformation-guard/bin $PATH
 
 # Go
-set PATH /usr/local/go/bin $PATH
+# set PATH /usr/local/go/bin $PATH
