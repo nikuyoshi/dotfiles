@@ -14,10 +14,6 @@ declare -a dotfiles=(
   '.config/omf/theme'
 )
 
-# Install oh-my-fish
-curl -L https://get.oh-my.fish | fish
-/usr/bin/fish --command "omf install robbyrussell"
-
 for dotfile in "${dotfiles[@]}"
 do
   if [ ! -f ${HOME}/"${dotfile}" ]; then
