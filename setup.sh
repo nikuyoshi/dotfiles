@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-CURRENTDIR=`pwd`
+DOTFILESDIR=${HOME}/dev/workspace/dotfiles
 VIMSETTINGDIR=${HOME}/.vim
 VIMCOLORDIR=${VIMSETTINGDIR}/colors
 
@@ -17,7 +17,7 @@ declare -a dotfiles=(
 for dotfile in "${dotfiles[@]}"
 do
   if [ ! -f ${HOME}/"${dotfile}" ]; then
-    ln -sf ${CURRENTDIR}/"${dotfile}" ${HOME}/"${dotfile}"
+    ln -sf ${DOTFILESDIR}/"${dotfile}" ${HOME}/"${dotfile}"
   fi
 done
 echo "finished linking ${#dotfiles[@]} files"
@@ -28,6 +28,6 @@ fi
 echo "finished creating ${VIMCOLORDIR}"
 
 if [ ! -f ${VIMCOLORDIR} ]; then
-  ln -sf ${CURRENTDIR}/molokai/colors/molokai.vim ${VIMCOLORDIR}
+  ln -sf ${DOTFILESDIR}/molokai/colors/molokai.vim ${VIMCOLORDIR}
 fi
 echo "finished linking molokai.vim"
