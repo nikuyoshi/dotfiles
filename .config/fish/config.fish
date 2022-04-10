@@ -56,3 +56,6 @@ function j
 end
 
 complete --command j --exclusive --arguments '(__jump_hint)'
+
+# Starship configuration
+starship init fish | source

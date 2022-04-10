@@ -101,3 +101,7 @@ alias vim="mvim -v"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Starship configuration
+eval "$(starship init zsh)"
+
